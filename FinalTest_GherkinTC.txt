@@ -1,0 +1,23 @@
+Feature: 
+The user can order an item on olx.ro
+
+Scenario: 
+The user picks up an item on olx.ro and orders it.
+
+Given:
+The user goes to https://www.olx.ro/
+
+AND
+Picks up an item
+AND
+Orders it with delivery
+AND
+logs into an existing account or signs up
+AND 
+fills in the delivery data
+
+When:
+The user press the button "Continua"
+
+Then:
+The data about the order is visible
