@@ -1,0 +1,26 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Lesson_5 {
+
+	public static void main(String[] args) throws InterruptedException  {
+		// TODO Auto-generated method stub
+		
+		
+		
+		ChromeDriver driverChrome = new ChromeDriver();
+		driverChrome.get("https://www.olx.ro/");	
+		driverChrome.manage().window().maximize();
+		
+		driverChrome.findElement(By.cssSelector("#onetrust-accept-btn-handler")).click();
+		Thread.sleep(5000);
+		driverChrome.findElement(By.xpath("//*[@id=\"hydrate-root\"]/header/div/div/div[2]")).click();
+		Thread.sleep(3000);
+		driverChrome.findElement(By.xpath("//*[@name=\"username\"]")).sendKeys("ellatkaciuk@gmail.com");
+		driverChrome.findElement(By.xpath("//*[@class=\"css-1kzly1g\"]")).sendKeys("OLea0694*");
+		driverChrome.findElement(By.xpath("//*[@data-testid=\"login-submit-button\"]")).click();
+		Thread.sleep(3000);
+		driverChrome.get("https://www.olx.ro/delivery/checkout/b011351e-2fa2-5abf-644a-99e53794e9f6/#summary");
+		driverChrome.findElement(By.xpath("//*[@id=\"mainContent\"]/main/section[5]/div/button[2]")).click();
+		driverChrome.findElement(By.xpath("//*[@id=\"body-container\"]/div/div/div/div/div/div[3]/div/div/div[2]/div[2]/div[2]/div/button[2]/div/div[1]")).click();
+		
